@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroSketch</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/script.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>NeuroSketch</h1>
+        <p>Upload an image to detect Parkinson's Disease.</p>
+
+        <!-- Form for uploading images -->
+        <form method="POST" enctype="multipart/form-data" action="/" id="uploadForm">
+            <label for="file" class="custom-upload-btn">Choose an Image</label>
+            <input type="file" id="file" name="file" accept="image/png, image/jpeg">&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+            
+            <br>
+            <button type="submit" class="btn">Submit Image</button>
+            <span class="file-name">No file chosen</span>  <!-- Displays the selected file name -->
+            
+        </form>
+
+        <!-- Display the result -->
+        {% if result %}
+            <h3>Prediction Result:</h3>
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+
+    <style>
+
+    </style>
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>
